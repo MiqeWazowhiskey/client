@@ -2,11 +2,12 @@ import {TbCurrencySolana} from "react-icons/tb";
 import { RiNftLine } from "react-icons/ri";
 import { IoWalletSharp } from "react-icons/io5";
 import {NavLink} from "react-router-dom";
+import {FaPaintBrush} from "react-icons/fa";
 
 export const Sidebar = () => {
   return (
     <div
-      className="w-24 h-screen flex items-center">
+      className="lg:w-24 md:w-24 w-16 h-screen flex items-center">
       <div
         className="w-full flex flex-col justify-around items-center h-[94%] ml-5 bg-black rounded-lg bg-opacity-50">
         <NavLink to="/">
@@ -15,6 +16,13 @@ export const Sidebar = () => {
             <span><TbCurrencySolana/></span>
           </div>
           <p className="text-white text-sm text-center">Home</p>
+        </NavLink>
+        <NavLink to="/create">
+          <div
+            className="rounded-full flex justify-center text-white text-3xl p-3 hover:scale-110 transition-all hover:bg-white hover:bg-opacity-20">
+            <span><FaPaintBrush/></span>
+          </div>
+          <p className="text-white text-sm text-center">Create</p>
         </NavLink>
         <NavLink to="/artists">
           <div

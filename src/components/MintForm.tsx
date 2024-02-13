@@ -29,7 +29,7 @@ export const MintForm = () => {
   const onSubmit = (data: MintFormProps) => console.log(data)
 
   return (
-    <form className="flex flex-col gap-3 w-[500px] px-4 py-4 bg-black bg-opacity-20 rounded-lg items-center" onSubmit={handleSubmit(onSubmit)}>
+    <form className="flex flex-col text-white gap-3 lg:w-[500px] md:w-[400px] transition-all px-4 py-4 bg-black bg-opacity-20 rounded-lg items-center" onSubmit={handleSubmit(onSubmit)}>
       <label className="flex flex-row  gap-2 w-full" htmlFor="name">Name<p className="text-red-500">*</p></label>
       <input className="bg-inherit py-2 px-4 w-full" {...register("name",{required:true})} />
       {errors.name && errors.name.type === "required" && (
