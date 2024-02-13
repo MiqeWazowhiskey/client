@@ -6,7 +6,7 @@ import {NavLink} from "react-router-dom";
 export const Sidebar = () => {
   return (
     <div
-      className="w-[6%] h-screen fixed flex items-center">
+      className="w-24 h-screen flex items-center">
       <div
         className="w-full flex flex-col justify-around items-center h-[94%] ml-5 bg-black rounded-lg bg-opacity-50">
         <NavLink to="/">
