@@ -11,10 +11,10 @@ export const createNft = async (name:string,owner:string, description:string,ima
     sellerFeeBasisPoints:fee
   });
   console.log(response.result);
-
 }
 
 export const getMints = async () => {
   const response = await helius.getMintlist({query: Collections.ABC});
+  console.log(response.result);
   return response.result;
 }
