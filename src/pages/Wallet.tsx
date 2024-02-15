@@ -6,7 +6,7 @@ import {useWeb3React} from "@web3-react/core";
 export const Wallet = () => {
   const {connector,hooks} = useWeb3React();
   return (
-    <div className="w-full h-full text-white flex items-center justify-center">
+    <div className="text-white flex items-center justify-center">
       <ConnectionCard connector={connector} hooks={hooks} name='Solana'/>
     </div>
   )

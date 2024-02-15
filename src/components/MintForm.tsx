@@ -30,7 +30,7 @@ export const MintForm = () => {
 
   return (
     <form
-      className="flex flex-col text-white gap-3 lg:w-[500px] md:w-[400px] transition-all px-4 py-4 bg-black bg-opacity-20 rounded-lg items-center"
+      className="flex flex-col text-white gap-3 w-full lg:w-[500px] md:w-[400px] transition-all px-4 py-4 bg-black bg-opacity-20 rounded-lg items-center"
       onSubmit={handleSubmit(onSubmit)}>
       <label className="flex flex-row  gap-2 w-full"
              htmlFor="name">
