@@ -10,7 +10,7 @@ import {
 import {v4 as uuidv4} from 'uuid';
 import {collection, addDoc} from "firebase/firestore";
 import {storage, db} from "../../firebase.config.js";
-import {createNft} from "../services/nftService.ts";
+// import {createNft} from "../services/nftService.ts";
 import {useWeb3React} from "@web3-react/core";
 
 export const MintForm = () => {
@@ -58,28 +58,29 @@ export const MintForm = () => {
       image: downloadUrl
     });
   }
-  const onSubmit = (data: MintFormProps) => {
-      if (account) {
-        createNft(
-          data.name,
-          account,
-          data.description,
-          downloadUrl,
-          +data.fee,
-          data.symbol
-        )
-          .then(() => postFirestore(data)).catch((error) => {
-          console.log(error)
-        });
-      } else {
-        alert("Connect Wallet")
-      }
-  }
+  // const onSubmit = (data: MintFormProps) => {
+  //     if (account) {
+  //       createNft(
+  //         data.name,
+  //         account,
+  //         data.description,
+  //         downloadUrl,
+  //         +data.fee,
+  //         data.symbol
+  //       )
+  //         .then(() => postFirestore(data)).catch((error) => {
+  //         console.log(error)
+  //       });
+  //     } else {
+  //       alert("Connect Wallet")
+  //     }
+  // }
 
   return (
     <form
       className="flex flex-col text-white gap-3 w-full lg:w-[500px] md:w-[400px] transition-all px-4 py-4 bg-black bg-opacity-20 rounded-lg items-center"
-      onSubmit={handleSubmit(()=>onSubmit)}>
+      // onSubmit={handleSubmit(()=>onSubmit)}
+      >
       <label className="flex flex-row  gap-2 w-full"
              htmlFor="name">
         Name
